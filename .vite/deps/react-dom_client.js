@@ -1,9 +1,10 @@
 import {
   require_react_dom
-} from "./chunk-MKFI7NYJ.js";
+} from "./chunk-2JRVN4QV.js";
+import "./chunk-L2H5Y3CP.js";
 import {
   __commonJS
-} from "./chunk-GIQZIPNC.js";
+} from "./chunk-UXIASGQL.js";
 
 // node_modules/react-dom/client.js
 var require_client = __commonJS({

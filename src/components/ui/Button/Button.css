@@ -1,0 +1,58 @@
+.app-button {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+  font-size: 0.95rem;
+}
+
+/* Sizes */
+.app-button.small {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
+.app-button.medium {
+  padding: 10px 16px;
+}
+
+.app-button.large {
+  padding: 14px 20px;
+  font-size: 1rem;
+}
+
+/* Variants */
+.app-button.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.app-button.primary:hover {
+  background-color: #005fcc;
+}
+
+.app-button.secondary {
+  background-color: #e9ecef;
+  color: #333;
+}
+
+.app-button.secondary:hover {
+  background-color: #d8dce1;
+}
+
+.app-button.danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.app-button.danger:hover {
+  background-color: #b22a36;
+}
+
+/* Disabled state */
+.app-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

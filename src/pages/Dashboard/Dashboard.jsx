@@ -1,12 +1,43 @@
 import React from 'react';
 import { useData } from '../../context/DataContext';
 import Button from '../../components/ui/Button/Button';
-import { useExcelData } from '../../hooks/useExcelData';
 import './Dashboard.css';
 
 const Dashboard = () => {
-  const { excelData, headers, currentFile } = useData();
+  const { excelData, headers, currentFile, setExcelData, setHeaders, setCurrentFile } = useData();
   const hasData = excelData && excelData.length > 0;
+
+  // Función para subir archivo DIRECTAMENTE
+  const handleFileUpload = () => {
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.xlsx,.xls,.csv';
+    
+    fileInput.onchange = async (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        try {
+          // Importar y usar tu excelParser
+          const { readExcelFile } = await import('../../services/excelParser');
+          const result = await readExcelFile(file);
+          
+          // Guardar en el context
+          setExcelData(result.data);
+          setHeaders(result.headers);
+          setCurrentFile(file.name);
+          
+          console.log('✅ Archivo cargado:', result.data);
+          alert(`✅ ${file.name} cargado\n${result.data.length} registros procesados`);
+          
+        } catch (error) {
+          console.error('Error:', error);
+          alert(`❌ Error: ${error.message}`);
+        }
+      }
+    };
+    
+    fileInput.click();
+  };
 
   // Calcular métricas básicas
   const metrics = hasData ? {
@@ -30,7 +61,7 @@ const Dashboard = () => {
             <h2>No hay datos cargados</h2>
             <p>Comienza subiendo un archivo Excel para visualizar tus datos</p>
             <Button 
-              onClick={() => window.location.hash = '#upload'}
+              onClick={handleFileUpload}
               variant="primary"
               size="large"
             >
@@ -141,7 +172,7 @@ const Dashboard = () => {
               </Button>
               
               <Button 
-                onClick={() => window.location.hash = '#upload'}
+                onClick={handleFileUpload}
                 variant="secondary"
                 size="large"
               >

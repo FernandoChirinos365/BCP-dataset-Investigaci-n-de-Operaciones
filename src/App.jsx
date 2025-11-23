@@ -1,28 +1,37 @@
-import React from "react"
-import "./App.css"
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+import { DataProvider } from "./context/DataContext";
+import Sidebar from "./components/layout/Sidebar/Sidebar";
+
+// Páginas
+import Dashboard from "./pages/Dashboard/Dashboard";
+import DataView from "./pages/DataView/DataView";
+import Upload from "./pages/Upload/Upload";
+import Optimizer from "./pages/Optimizer/Optimizer";
+
+import "./App.css";
+
+export default function App() {
+  const [currentPage, setCurrentPage] = useState("dashboard");
+
   return (
-    <div style={{ 
-      padding: "50px", 
-      textAlign: "center", 
-      backgroundColor: "#225785ff",
-      minHeight: "100vh"
-    }}>
-      <h1 style={{ 
-        color: "red", 
-        fontSize: "2.5rem", 
-        border: "3px solid blue",
-        padding: "20px",
-        backgroundColor: "yellow"
-      }}>
-        🚀 BCP DATASET OPTIMIZATION - FUNCIONANDO
-      </h1>
-      <p style={{ fontSize: "1.5rem", color: "green" }}>
-        ✅ La aplicación React está cargando correctamente
-      </p>
-    </div>
-  )
-}
+    <BrowserRouter>
+      <DataProvider>
+        <div className="app-container">
+          <Sidebar currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
-export default App
+          <div className="page-content">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dataview" element={<DataView />} />
+              <Route path="/upload" element={<Upload />} />
+              <Route path="/optimizer" element={<Optimizer />} />
+            </Routes>
+          </div>
+        </div>
+      </DataProvider>
+    </BrowserRouter>
+  );
+}
