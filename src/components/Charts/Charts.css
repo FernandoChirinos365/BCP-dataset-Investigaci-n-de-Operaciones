@@ -1,0 +1,153 @@
+/* Charts Container */
+.chart-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.chart-title {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.chart-container {
+  padding: 10px;
+}
+
+/* Bar Chart */
+.bar-chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 250px;
+  padding: 20px 0;
+}
+
+.bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.bar-track {
+  height: 200px;
+  width: 40px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  position: relative;
+  margin: 10px 0;
+}
+
+.bar-fill {
+  width: 100%;
+  border-radius: 4px;
+  transition: height 0.3s ease;
+  position: absolute;
+  bottom: 0;
+}
+
+.bar-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.bar-value {
+  font-size: 0.8rem;
+  color: #333;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* Line Chart */
+.line-chart {
+  height: 300px;
+  position: relative;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  font-size: 0.9rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.legend-color.actual {
+  background-color: #007bff;
+}
+
+.legend-color.forecast {
+  background-color: #28a745;
+}
+
+.chart-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 200px;
+  padding: 20px 0;
+}
+
+.chart-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.line {
+  width: 6px;
+  border-radius: 3px;
+  margin: 0 2px;
+  transition: height 0.3s ease;
+}
+
+.actual-line {
+  background-color: #007bff;
+}
+
+.forecast-line {
+  background-color: #28a745;
+}
+
+.point-label {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bar-chart {
+    height: 200px;
+  }
+  
+  .bar-track {
+    height: 150px;
+    width: 30px;
+  }
+  
+  .chart-area {
+    height: 150px;
+  }
+}

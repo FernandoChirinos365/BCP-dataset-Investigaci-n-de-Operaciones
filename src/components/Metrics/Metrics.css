@@ -1,0 +1,143 @@
+/* Quick Metrics */
+.quick-metrics {
+  margin-bottom: 30px;
+}
+
+.metrics-title {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.metric-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-left: 4px solid #007bff;
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.metric-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.metric-unit {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* KPI Cards */
+.kpi-cards {
+  margin-bottom: 30px;
+}
+
+.kpi-title {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.kpi-card {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+}
+
+.kpi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.kpi-name {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.kpi-trend {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.kpi-trend.up {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.kpi-trend.down {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.kpi-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 8px;
+}
+
+.kpi-description {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .metrics-grid,
+  .kpi-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .metric-value {
+    font-size: 1.5rem;
+  }
+  
+  .kpi-value {
+    font-size: 1.6rem;
+  }
+}

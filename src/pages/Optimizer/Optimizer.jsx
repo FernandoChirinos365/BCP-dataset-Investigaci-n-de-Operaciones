@@ -1,5 +1,5 @@
 import React from "react";
-import InputPanel from "../../components/optimizer/InputPanel/InputPanel";
+import InputPanel from "../../components/optimizer/InputPanel/InputPanel.jsx";
 import Results from "../../components/optimizer/Results/Results";
 import "./Optimizer.css";
 

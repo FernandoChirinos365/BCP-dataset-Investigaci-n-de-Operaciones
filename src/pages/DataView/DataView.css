@@ -146,3 +146,20 @@
     width: 100%;
   }
 }
+
+/* === ESTILOS DE DEPURACIÓN - ELIMINAR DESPUÉS === */
+.horizontal-cards {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 25px !important;
+  background-color: rgba(255, 0, 0, 0.1) !important;
+  border: 2px dashed red !important;
+  padding: 10px !important;
+}
+
+.analysis-card {
+  flex: 1 !important;
+  background-color: rgba(0, 255, 0, 0.1) !important;
+  border: 2px solid blue !important;
+  min-height: 200px !important;
+}
