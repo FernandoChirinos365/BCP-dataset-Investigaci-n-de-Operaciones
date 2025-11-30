@@ -11,7 +11,7 @@ const Sidebar = () => {
     { icon: '📈', label: 'Predicción de Demanda', path: '/prediction' },
     { icon: '⚙️', label: 'Optimización', path: '/optimizer' },
     { icon: '🔄', label: 'Simulación de Escenarios', path: '/simulation' },
-    { icon: '🎯', label: 'Análisis de Sensibilidad', path: '/sensitivity' },
+  
     { icon: '📋', label: 'Reportes', path: '/reports' }
   ];
 
