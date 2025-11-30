@@ -6,9 +6,10 @@
 }
 
 :root {
-  --bcp-red: #8B0000;
-  --bcp-red-light: #B22222;
-  --bcp-gold: #FFD700;
+  --bcp-blue: #0033A0;    /* Azul BCP */
+  --bcp-orange: #FF6B00;  /* Naranja BCP */
+  --bcp-blue-light: #0047BB;
+  --bcp-orange-light: #FF8C00;
   --bcp-white: #FFFFFF;
   --bcp-gray-light: #F8F9FA;
   --bcp-gray: #6C757D;

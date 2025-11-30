@@ -1,0 +1,5 @@
+.optimizer-page { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.optimizer-header { text-align: left; margin-bottom: 18px; }
+.optimizer-header h1 { font-size: 1.6rem; color: #222; margin-bottom: 6px; }
+.optimizer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+@media (max-width: 900px) { .optimizer-grid { grid-template-columns: 1fr; } }
